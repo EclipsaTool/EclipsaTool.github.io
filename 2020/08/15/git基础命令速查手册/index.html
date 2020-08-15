@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+        Git基础命令速查手册 - EclipsaTool
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="git常用指令分类汇总。文中使用的系统为ubuntu。" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <title>Git基础命令速查手册 - EclipsaTool</title>
+    
+    
+    <link rel="stylesheet" href="https://eclipsatool.github.io/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="Git基础命令速查手册" />
+<meta property="og:description" content="git常用指令分类汇总。文中使用的系统为ubuntu。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" />
+<meta property="article:published_time" content="2020-08-15T07:11:53+08:00" />
+<meta property="article:modified_time" content="2020-08-15T07:11:53+08:00" />
+<meta itemprop="name" content="Git基础命令速查手册">
+<meta itemprop="description" content="git常用指令分类汇总。文中使用的系统为ubuntu。">
+<meta itemprop="datePublished" content="2020-08-15T07:11:53+08:00" />
+<meta itemprop="dateModified" content="2020-08-15T07:11:53+08:00" />
+<meta itemprop="wordCount" content="2019">
+
+
+
+<meta itemprop="keywords" content="计算机,git," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git基础命令速查手册"/>
+<meta name="twitter:description" content="git常用指令分类汇总。文中使用的系统为ubuntu。"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/EclipsaTool" target="_blank">
+            <img class="img-circle img-rotate" src="https://eclipsatool.github.io/Eclipsa.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Eclipsa</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">EclipsaTool</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>广东, 中国</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">主页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">归档</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>生活无爱，电脑有情。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://eclipsatool.github.io/categories/%E7%AC%94%E8%AE%B0/" class="category-list-link">笔记</a><span class="category-list-count">3</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://eclipsatool.github.io/tags/git/" class="tag-list-link">git</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://eclipsatool.github.io/tags/markdown/" class="tag-list-link">markdown</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://eclipsatool.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="tag-list-link">计算机</a><span
+                    class="tag-list-count">3</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/" class="title">Git基础手册</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-15 07:31:19 &#43;0800 &#43;08" itemprop="datePublished">2020-08-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" class="title">Git基础命令速查手册</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-15 07:11:53 &#43;0800 &#43;08" itemprop="datePublished">2020-08-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://eclipsatool.github.io/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="title">Markdown基本语法</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-15 06:13:57 &#43;0800 &#43;08" itemprop="datePublished">2020-08-15</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/"
+    >Git基础命令速查手册</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" class="article-date">
+  <time datetime="2020-08-15 07:11:53 &#43;0800 &#43;08" itemprop="datePublished">2020-08-15</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/"> 笔记 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"> 计算机 </a>
+    <a class="article-tag-link" href="/tags/git/"> git </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/#comments"
+            class="article-comment-link">评论</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2019字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 5分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="git基础命令速查手册">Git基础命令速查手册</h1>
+<p>作者：eclipsa</p>
+<p>摘要：git常用指令分类汇总。文中使用的系统为ubuntu。</p>
+<p>[toc]</p>
+<h2 id="常用命令与文件位置">常用命令与文件位置</h2>
+<p><img src="/images/Git%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E4%B8%8E%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E5%85%B3%E7%B3%BB.jpg" alt="Git常用指令与文件位置关系"></p>
+<h2 id="安装git">安装Git</h2>
+<p>ubuntu：<code>sudo apt-get install git</code></p>
+<h2 id="获取帮助">获取帮助</h2>
+<pre><code>git help
+git help &lt;指令&gt;
+</code></pre>
+<h2 id="分类">分类</h2>
+<h3 id="基本配置">基本配置</h3>
+<h4 id="邮箱信息">邮箱信息</h4>
+<p>配置全局邮箱信息，针对每个仓库。</p>
+<pre><code>git config --global user.name &quot;John Doe&quot;
+git config --global user.email johndoe@example.com
+</code></pre>
+<p>配置本地邮箱信息，针对个别仓库。</p>
+<pre><code>git config --local user.name &quot;John Doe&quot;
+git config --local user.email johndoe@example.com
+</code></pre>
+<p>检查配置</p>
+<pre><code>git config --list
+</code></pre>
+<h4 id="gitignore">.gitignore</h4>
+<p>以<code>#</code>开头的git会认为是注释。</p>
+<p>默认匹配模式会自动递归整个工作目录。使用标准glob模式<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<p>匹配模式以<code>/</code>开头可以忽略指定目录。</p>
+<p>匹配模式以<code>/</code>结尾可以忽略指定的文件夹名。(会递归，所有同名文件夹都忽略)</p>
+<p>以<code>!</code>开头可以指定跟踪某些匹配模式匹配的内容。(相当于补丁)</p>
+<pre><code># 忽略所有的 .a 文件
+*.a
+
+# 但跟踪所有的 lib.a，即便你在前面忽略了 .a 文件
+!lib.a
+
+# 只忽略当前目录下的 TODO 文件，而不忽略 subdir/TODO
+/TODO
+
+# 忽略任何目录下名为 build 的文件夹
+build/
+
+# 忽略 doc/notes.txt，但不忽略 doc/server/arch.txt
+doc/*.txt
+
+# 忽略 doc/ 目录及其所有子目录下的 .pdf 文件
+doc/**/*.pdf
+</code></pre>
+<p>获取内置帮助。</p>
+<pre><code>man gitignore
+</code></pre>
+<h4 id="工具配置">工具配置</h4>
+<p><code>git config --global core.editor</code>可以指定git默认用的文本编辑器。</p>
+<h3 id="本地仓库">本地仓库</h3>
+<h4 id="建立仓库">建立仓库</h4>
+<p>建立本地空白仓库</p>
+<pre><code>cd /home/eclipsa/example_git_workspace
+git init
+</code></pre>
+<h4 id="文件操作">文件操作</h4>
+<p>查看文件状态</p>
+<pre><code>git status
+git stauts -s
+</code></pre>
+<p>准确添加文件</p>
+<pre><code>git add &lt;文件名&gt;
+</code></pre>
+<p>撤销添加文件</p>
+<pre><code>git reset HEAD &lt;文件名&gt;
+</code></pre>
+<p>查看文件异同</p>
+<pre><code>git diff
+git diff --cached
+</code></pre>
+<p>提交文件</p>
+<pre><code>git commit
+git commit -m &quot;修改注释”
+git commit &lt;文件名&gt;
+
+git commit -a &lt;文件名&gt;
+</code></pre>
+<p>重新提交</p>
+<pre><code>git commit --amend
+</code></pre>
+<p>查看缓存区文件列表</p>
+<pre><code>git ls-files
+</code></pre>
+<p>移除文件</p>
+<pre><code>git rm &lt;文件名&gt;
+git rm --cached &lt;文件名&gt;
+</code></pre>
+<p>移动/重命名文件</p>
+<pre><code>git mv &lt;文件名&gt; &lt;新文件名&gt;
+</code></pre>
+<p>工作区单个文件还原上次提交状态</p>
+<pre><code>git checkout -- &lt;文件名&gt;
+</code></pre>
+<p>清理文件</p>
+<p>用于清理git中未跟踪的软件(.gitignore也算跟踪)。</p>
+<pre><code>git clean
+git clean -x
+</code></pre>
+<h4 id="日志操作">日志操作</h4>
+<p>查看日志</p>
+<pre><code>git log
+
+git log -p -2
+git log -patch -2
+
+git log --stat
+</code></pre>
+<p><code>git log</code>有用的参数</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ndash;graph</td>
+<td>在日志旁以 ASCII 图形显示分支与合并历史。</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>按文件补丁形式显示。</td>
+</tr>
+<tr>
+<td>&ndash;name-only</td>
+<td>仅在提交信息后显示已修改的文件清单。</td>
+</tr>
+<tr>
+<td>&ndash;name-status</td>
+<td>显示新增、修改、删除的文件清单。</td>
+</tr>
+<tr>
+<td>&ndash;oneline</td>
+<td><code>--pretty=oneline --abbrev-commit</code> 合用的简写。一行显示。</td>
+</tr>
+<tr>
+<td>&ndash;author=&rdquo;&rdquo;</td>
+<td>限制作者。</td>
+</tr>
+<tr>
+<td>&ndash;since<code>, </code>&ndash;after</td>
+<td>指定时间。</td>
+</tr>
+<tr>
+<td>&ndash;grep</td>
+<td>仅显示提交说明中包含指定字符串的提交。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="远程仓库">远程仓库</h3>
+<h4 id="建立仓库-1">建立仓库</h4>
+<p>克隆远程仓库</p>
+<p>(<code>git clone</code>支持多种通讯协议。)</p>
+<pre><code>git clone &lt;url&gt;
+
+git clone ssh://[user@]host.xz[:port]/path/to/repo.git/
+git clone git://host.xz[:port]/path/to/repo.git/
+git clone http[s]://host.xz[:port]/path/to/repo.git/
+git clone ftp[s]://host.xz[:port]/path/to/repo.git/
+</code></pre>
+<p>为本地仓库添加远程仓库</p>
+<pre><code>git remote add &lt;仓库服务器别名&gt; &lt;url&gt;
+</code></pre>
+<h4 id="仓库状态">仓库状态</h4>
+<pre><code>git remote
+git remote -v
+
+git remote show &lt;远程仓库服务器名&gt;
+</code></pre>
+<h4 id="仓库操作">仓库操作</h4>
+<p>获取远程仓库</p>
+<pre><code>git fetch &lt;远程仓库服务器名&gt;
+</code></pre>
+<p>推送本地仓库</p>
+<pre><code>git push &lt;远程仓库服务器名&gt; &lt;推送本地版本库分支名&gt;
+git push &lt;远程仓库服务器名&gt; &lt;推送本地版本库分支名&gt;:&lt;远程仓库分支名&gt;
+</code></pre>
+<p>同步远程仓库</p>
+<pre><code>git pull
+</code></pre>
+<p>重命名远程仓库</p>
+<pre><code>git remote rename &lt;远程仓库服务器名&gt; &lt;远程仓库服务器新名&gt;
+</code></pre>
+<p>删除远程仓库</p>
+<pre><code>git remote remove &lt;远程仓库服务器名&gt;
+git remote rm &lt;远程仓库服务器名&gt;
+</code></pre>
+<h3 id="分支">分支</h3>
+<h4 id="分支状态">分支状态</h4>
+<p>查看分支</p>
+<pre><code>git branch
+git branch -v
+git branch --no--merged
+git branch --merged
+git branch --merged &lt;分支名&gt;
+git branch -vv
+</code></pre>
+<h4 id="分支操作">分支操作</h4>
+<p>创建分支</p>
+<pre><code>git branch &lt;分支名&gt;
+</code></pre>
+<p>创建并切换分支</p>
+<pre><code>git checkout -b &lt;分支名&gt;
+</code></pre>
+<p>切换分支</p>
+<pre><code>git checkout &lt;分支名&gt;
+</code></pre>
+<p>合并分支</p>
+<pre><code>git merge &lt;分支名&gt;
+</code></pre>
+<p>删除分支</p>
+<pre><code>git branch -d &lt;分支名&gt;
+</code></pre>
+<p>创建跟踪分支</p>
+<pre><code>git checkout -b &lt;本地分支名&gt; &lt;远程服务器名&gt;/&lt;远程分支名&gt;
+git checkout --track &lt;远程服务器名&gt;/&lt;远程分支名&gt;
+</code></pre>
+<p>设置/修改上游分支</p>
+<pre><code>git branch -u &lt;远程服务器名&gt;/&lt;远程分支名&gt;
+</code></pre>
+<p>下载分支版本库</p>
+<pre><code>git fetch --all
+</code></pre>
+<p>删除远程分支</p>
+<pre><code>git pull &lt;远程服务器名&gt; --delete &lt;分支名&gt;
+</code></pre>
+<h3 id="贮藏">贮藏</h3>
+<h4 id="贮藏状态">贮藏状态</h4>
+<p>列出贮藏</p>
+<pre><code>git stash list
+</code></pre>
+<h4 id="贮藏操作">贮藏操作</h4>
+<p>创建贮藏</p>
+<pre><code>git stash
+git stash push
+</code></pre>
+<p>应用贮藏</p>
+<p><code>--index</code>可以让git在应用贮藏时，同时应用到工作目录和缓存区，而非只是工作目录。</p>
+<pre><code>git stash apply
+git stash apply stash@{贮藏号}
+git stash apply --index
+</code></pre>
+<p>移除贮藏</p>
+<pre><code>git stash drop
+git stash drop stash@{贮藏号}
+</code></pre>
+<p>应用贮藏同时移除贮藏</p>
+<pre><code>git stash pop
+</code></pre>
+<p>从贮藏创建分支</p>
+<pre><code>git stash branch &lt;分支名&gt;
+git stash branch &lt;分支名&gt; stash@{贮藏号}
+</code></pre>
+<h3 id="版本库标签">版本库标签</h3>
+<h4 id="标签状态">标签状态</h4>
+<p>列出全部标签</p>
+<pre><code>git tag
+</code></pre>
+<p>显示标签信息</p>
+<pre><code>git tag show
+</code></pre>
+<p>查看标签快照</p>
+<pre><code>git checkout &lt;标签名&gt;
+</code></pre>
+<h4 id="标签操作">标签操作</h4>
+<p>给当前版本打标签</p>
+<pre><code>git tag -a &lt;标签名&gt;
+</code></pre>
+<p>补打标签</p>
+<pre><code>git tag -a &lt;标签名&gt; &lt;部分校验和/完整校验和&gt;
+</code></pre>
+<p>推送标签</p>
+<pre><code>git pull &lt;分支名&gt; &lt;标签名&gt;
+git pull &lt;分支名&gt; --tags
+</code></pre>
+<p>删除标签</p>
+<pre><code>git tag -d &lt;标签名&gt;
+</code></pre>
+<p>删除服务器标签</p>
+<pre><code>git pull &lt;远程仓库服务器名&gt; :refs/tags/&lt;标签名&gt;
+git pull &lt;远程仓库服务器名&gt; --delete &lt;标签名&gt;
+</code></pre>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>shell所使用的，简化来的正则表达式。星号<code>*</code>匹配零个或多个任意字符。问号<code>?</code>匹配一个任意字符。<code>[abc]</code>匹配任意一个方括号中的字符。<code>[0-9]</code>匹配0到9的任意一个数字。<code>**</code>匹配任意位于中间的目录 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="article-footer">
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://eclipsatool.github.io/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="Markdown基本语法"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/"
+                    title="Git基础手册"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/EclipsaTool" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://eclipsatool.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://eclipsatool.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/eclipsatool.github.io\/',
+            CONTENT_URL: 'https:\/\/eclipsatool.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://eclipsatool.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>

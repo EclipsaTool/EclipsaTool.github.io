@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+        Markdown基本语法 - EclipsaTool
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="本文旨在提供较为标准部分的Markdown语法指南，并不记录全部Markdown语法。" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <title>Markdown基本语法 - EclipsaTool</title>
+    
+    
+    <link rel="stylesheet" href="https://eclipsatool.github.io/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="Markdown基本语法" />
+<meta property="og:description" content="本文旨在提供较为标准部分的Markdown语法指南，并不记录全部Markdown语法。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eclipsatool.github.io/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" />
+<meta property="article:published_time" content="2020-08-15T06:13:57+08:00" />
+<meta property="article:modified_time" content="2020-08-15T06:13:57+08:00" />
+
+<meta itemprop="name" content="Markdown基本语法">
+<meta itemprop="description" content="本文旨在提供较为标准部分的Markdown语法指南，并不记录全部Markdown语法。">
+<meta itemprop="datePublished" content="2020-08-15T06:13:57+08:00" />
+<meta itemprop="dateModified" content="2020-08-15T06:13:57+08:00" />
+<meta itemprop="wordCount" content="3872">
+
+
+
+<meta itemprop="keywords" content="Markdown,计算机," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Markdown基本语法"/>
+<meta name="twitter:description" content="本文旨在提供较为标准部分的Markdown语法指南，并不记录全部Markdown语法。"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+  </head>
+
+  
+  
+
+  <body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/EclipsaTool" target="_blank">
+            <img class="img-circle img-rotate" src="https://eclipsatool.github.io/Eclipsa.jpg" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Eclipsa</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md">EclipsaTool</h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>广东, 中国</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">主页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">归档</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>生活无爱，电脑有情。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://eclipsatool.github.io/categories/%E7%AC%94%E8%AE%B0/" class="category-list-link">笔记</a><span class="category-list-count">3</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://eclipsatool.github.io/tags/git/" class="tag-list-link">git</a><span
+                    class="tag-list-count">2</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://eclipsatool.github.io/tags/markdown/" class="tag-list-link">markdown</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://eclipsatool.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="tag-list-link">计算机</a><span
+                    class="tag-list-count">3</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/" class="title">Git基础手册</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-15 07:31:19 &#43;0800 &#43;08" itemprop="datePublished">2020-08-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/" class="title">Git基础命令速查手册</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-15 07:11:53 &#43;0800 &#43;08" itemprop="datePublished">2020-08-15</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://eclipsatool.github.io/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="title">Markdown基本语法</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-15 06:13:57 &#43;0800 &#43;08" itemprop="datePublished">2020-08-15</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+    >Markdown基本语法</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://eclipsatool.github.io/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time datetime="2020-08-15 06:13:57 &#43;0800 &#43;08" itemprop="datePublished">2020-08-15</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/"> 笔记 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/markdown/"> Markdown </a>
+    <a class="article-tag-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"> 计算机 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/#comments"
+            class="article-comment-link">评论</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 3872字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 8分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h1 id="markdown基本语法">Markdown基本语法</h1>
+<p>作者：eclipsa</p>
+<p>摘要：本文旨在提供较为标准部分的Markdown语法指南，并不记录全部Markdown语法。</p>
+<p>[toc]</p>
+<h2 id="什么是markdown">什么是Markdown</h2>
+<p>Markdown是一种具有纯文本格式语法的轻量级标记语言。</p>
+<p>目的：提供一种易于阅读和易于编写的纯文本格式书写，可选将其转换为的XHTML/HTML。</p>
+<p>标准化：尚未完全标准化，故软件对其支持和扩展有所异同。</p>
+<h2 id="基础语法">基础语法</h2>
+<h3 id="标题">标题</h3>
+<h4 id="设置标题">设置标题</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td># 一级标题</td>
+<td><!-- raw HTML omitted -->一级标题<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>## 二级标题</td>
+<td><!-- raw HTML omitted -->一级标题<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>### 三级标题</td>
+<td><!-- raw HTML omitted -->一级标题<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>#### 四级标题</td>
+<td><!-- raw HTML omitted -->一级标题<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>##### 五级标题</td>
+<td><!-- raw HTML omitted -->一级标题<!-- raw HTML omitted --></td>
+</tr>
+<tr>
+<td>###### 六级标题</td>
+<td><!-- raw HTML omitted -->六级标题<!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：用#开头，然后输入一个空格，然后输入标题内容。</p>
+<p>语法意义：#的数量代表标题的级别。</p>
+<h4 id="设置标题ids">设置标题IDs</h4>
+<p>注意：此语法支持并没有广泛支持。</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td># 一级标题{#标题id}</td>
+<td><!-- raw HTML omitted -->一级标题<!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：在标题之后输入一个{}，然后在其中输入#，然后输入自定义标题id。</p>
+<p>语法意义：标题id可用来作为锚点，使超链接可以跳转到相应的地方。</p>
+<h3 id="段落">段落</h3>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容 空白行 内容</td>
+<td><!-- raw HTML omitted -->内容<!-- raw HTML omitted --> 空白行 <!-- raw HTML omitted -->内容<!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：用空白行分割的内容就会称为两个段落。</p>
+<p>语法注意事项1：段落开头不应该有空格或tab。</p>
+<h3 id="断行">断行</h3>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容 空格 空格 回车 内容</td>
+<td><!-- raw HTML omitted -->内容<!-- raw HTML omitted -->内容<!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：在句子尾部输入两个以上的空格，然后换行就可以断行。</p>
+<p>语法意义：这适用于同一个段落内需要断行的地方。断行前后的内容同属于一个段落</p>
+<h3 id="转义字符">转义字符</h3>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\|</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：输入一个反斜杠后输入需要转义的字符即可将Markdown语法中用的一些字符转义为字符，从而可以显示。</p>
+<h3 id="强调">强调</h3>
+<h4 id="斜体">斜体</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+<th>渲染效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>这是*斜体*内容</code></td>
+<td><code>这是&lt;em&gt;斜体&lt;/em&gt;内容</code></td>
+<td>这是<em>重点</em>内容</td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：在内容前后输入1个*号即可以使内容加斜。</p>
+<h4 id="加粗">加粗</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+<th>渲染效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>这是**粗体**内容</code></td>
+<td><code>这是&lt;strong&gt;粗体&lt;/strong&gt;内容</code></td>
+<td>这是<strong>粗体</strong>内容</td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：在内容前后输入两个*号即可以使内容加粗。</p>
+<h4 id="粗斜体">粗斜体</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+<th>渲染效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>这是***粗斜体***内容</code></td>
+<td><code>这是&lt;strong&gt;&lt;em&gt;粗斜体&lt;/em&gt;&lt;/strong&gt;内容</code></td>
+<td>这是<em><strong>粗斜体</strong></em>内容</td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：在内容前后输入3个*号即可以使内容加粗斜。</p>
+<h4 id="删除线">删除线</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+<th>渲染效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>这是~~删除线~~内容</code></td>
+<td><code>这是&lt;del&gt;删除线&lt;/del&gt;内容</code></td>
+<td>这是<del>删除线</del>内容</td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：在内容前后输入两个~号即可以使内容有删除线。</p>
+<h4 id="区块引用">区块引用</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;这是区块引用的内容</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：在每行前输入一个或多个&gt;号，然后输入一个空格，即可以定义一个区块。每个&gt;号增加块引用的层级一次。块引用支持连续多行合并，如同一个块一样。</p>
+<p>语法意义：区块引用用于定义一个长引用文段。</p>
+<p>语法注意事项1：区块引用支持多行合并，如果想在同一个区块内放两段引用文段，两段引用文段中间补上一个同等级的空区块引用即可。效果如下</p>
+<pre><code>&gt;引用文1
+&gt;
+&gt;引用文2
+</code></pre>
+<p>语法注意事项2：区块引用的多层嵌套，效果如下</p>
+<blockquote>
+<p>引用文1</p>
+<blockquote>
+<p>引用文2</p>
+</blockquote>
+</blockquote>
+<p>语法注意事项3：区块引用可以支持其他元素，如粗体，标题等，具体情况需要测试。</p>
+<h3 id="列表">列表</h3>
+<h4 id="有序列表">有序列表</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1. 内容</code></td>
+<td><code>&lt;ol&gt;&lt;li&gt;内容&lt;/li&gt;&lt;/ol&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：以阿拉伯数字开头，然后输入一个.号，然后输入一个空格，即定义了一个有序列表的一项。</p>
+<p>语法注意事项1：有序列表支持多层嵌套。前面打n组四个空格，然后输入有序列表可以实现n级有序列表。</p>
+<p>语法注意事项2：有序列表对数字的值没有要求，顺序数值大小随意。</p>
+<p>语法注意事项3：有序列表可以支持其他元素，如粗体，标题等，具体情况需要测试。</p>
+<h4 id="无序列表">无序列表</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>- 内容</code></td>
+<td><code>&lt;ul&gt;&lt;li&gt;内容&lt;/li&gt;&lt;/ul&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：以-号开头，然后输入一个空格，即定义了一个无序列表的一项。</p>
+<p>语法注意事项1：无序列表支持多层嵌套。前面打n组四个空格，然后输入有序列表可以实现n级无序列表。</p>
+<p>语法注意事项2：无序列表可以支持其他元素，如粗体，标题等，具体情况需要测试。</p>
+<h4 id="任务列表">任务列表</h4>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>未完成任务</td>
+<td><code>- [ ] 任务描述</code></td>
+</tr>
+<tr>
+<td>已完成任务</td>
+<td><code>- [x] 任务描述</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：以-号开头，然后输入一个空格，然后一个[]，[]中空格代表未完成，x代表已完成，随后输入任务描述。</p>
+<h4 id="自定义列表">自定义列表</h4>
+<p>注意：此语法支持并没有广泛支持。</p>
+<p>语法如下</p>
+<pre><code>类别
+: 种名
+</code></pre>
+<p>HTML如下</p>
+<pre><code>&lt;dl&gt;
+    &lt;dt&gt;类别&lt;dt&gt;
+    &lt;dd&gt;种名d&lt;dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<p>语法详解：第一行定义类别名，第二行以:号开头，然后输入一个空格，接下来输入种名即可。</p>
+<h3 id="图片">图片</h3>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>![失败描述](/assets/images/tux.png)</code></td>
+<td><code>&lt;img src=&quot;/assets/images/tux.png&quot; alt=&quot;失败描述&quot;&gt;</code></td>
+</tr>
+<tr>
+<td><code>![失败描述](/assets/images/tux.png &quot;图片标题&quot;)</code></td>
+<td><code>&lt;img src=&quot;/assets/images/tux.png&quot; alt=&quot;失败描述&quot; title=&quot;图片标题&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：以!号开头，随后是[]，最后是()。[]中填写图片描述，(填写文件路径或者url)</p>
+<p>语法注意事项1：失败描述在图片加载失败时可能会以文字形式出现(视渲染支持)。图片标题在图片加载后鼠标悬浮于图片之上一会会显示。</p>
+<h3 id="代码">代码</h3>
+<h4 id="单行代码">单行代码</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`代码行`</td>
+<td><code>&lt;code&gt;代码行&lt;/code&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：前后输入`号包裹代码即表示为代码，不尝试渲染其他元素。仅限一行以内的内容。</p>
+<h4 id="代码区块">代码区块</h4>
+<p>语法如下</p>
+<pre><code class="language-json">{
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;Smith&quot;,
+  &quot;age&quot;: 25
+}
+</code></pre>
+<p>效果</p>
+<pre><code class="language-json">{
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;Smith&quot;,
+  &quot;age&quot;: 25
+}
+</code></pre>
+<p>语法详解：代码内容前后输入三个`号开头的空行，第一组后面可以跟代码的语言名称。渲染器可以用于成立代码高亮。</p>
+<h3 id="水平线">水平线</h3>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&mdash;</td>
+<td><!-- raw HTML omitted --></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：以三个-号开头的空行将变成水平线。</p>
+<p>语法注意事项1：三个-号前后不要有内容。</p>
+<h3 id="超链接">超链接</h3>
+<h4 id="直接超链接">直接超链接</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;test@example.com&gt;</code></td>
+<td><code>&lt;a href=&quot;test@example.com&quot;&gt;test@example.com&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td><code>&lt;http://test.com&gt;</code></td>
+<td><code>&lt;a href=&quot;http://test.com&quot;&gt;http://test.com&lt;/a&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：将URLs或邮箱地址放在&lt;&gt;之中可以生成超链接。</p>
+<p>语法注意事项1：简易超链接支持字体强调语法。</p>
+<h4 id="格式化超链接">格式化超链接</h4>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[显示文本](http://test@example.com)</code></td>
+<td><code>&lt;a href=&quot;http://test@example.com&quot;&gt;显示文本&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td><code>[显示文本](#锚点名)</code></td>
+<td><code>&lt;a href=&quot;#锚点名&quot;&gt;显示文本&lt;/a&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：输入一个[]，然后输入一个()。在[]中输入要显示的文字，在()中输入超链接的指向。</p>
+<p>语法注意事项1：格式化超链接支持字体强调语法。</p>
+<h4 id="引用式超链接">引用式超链接</h4>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>Markdown</th>
+<th>HTML</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>引用超链接</td>
+<td><code>[显示文本][超链接别名]</code></td>
+<td></td>
+</tr>
+<tr>
+<td>超链接源</td>
+<td><code>[超链接别名]: http://test@example.com</code></td>
+<td><code>&lt;a href=&quot;http://test@example.com&quot;&gt;显示文本&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td>超链接源</td>
+<td><code>[超链接别名]: http://test@example.com 链接标题</code></td>
+<td><code>&lt;a href=&quot;http://test@example.com&quot; title=&quot;链接标题&quot;&gt;显示文本&lt;/a&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：引用超链接语法是先输入两个[]，第一个放显示文本，第二个放超链接别名，链接别名用于绑定超链接源。设置链接源语法为先输入一个[]，在[]中输入超链接别名，然后输入:号，一个空格，随后是超链接。</p>
+<p>语法目的：方便重复引用同一个超链接。</p>
+<p>语法注意事项1：超链接别名不区分大小。</p>
+<p>语法注意事项2：引用式超链接中超链接源可以随意放置在文章中任意行。一行一条。建议统一写在文末。</p>
+<h3 id="html">HTML</h3>
+<p>Markdown支持使用HTML的语法，但有部分元素不支持。在块级HTML中不能再使用Markdown语法。</p>
+<h2 id="扩展语法">扩展语法</h2>
+<h3 id="表格">表格</h3>
+<p>表格语法如下</p>
+<pre><code>|标题1|标题2|
+|---|---:|
+|内容|内容|
+|内容|内容|
+</code></pre>
+<p>渲染效果</p>
+<table>
+<thead>
+<tr>
+<th>标题1</th>
+<th align="right">标题2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容</td>
+<td align="right">内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td align="right">内容</td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：用|号将内容包裹。第二行内容全部用-号定义表格标题栏，每个内容至少3个-号，在-号最左或者最右输入:号将使该栏支持左或右对齐，如果左右都有:号则为中间对齐。</p>
+<p>语法注意事项1：表格内支持一些内嵌元素。包括链接、单行代码、强调等。不包括标题、多行元素、水平线、HTML标签等。</p>
+<h3 id="脚注">脚注</h3>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>Markdown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>引用脚注</td>
+<td><code>[^脚注别名]</code></td>
+</tr>
+<tr>
+<td>设置脚注源</td>
+<td><code>[脚注别名]: 注释内容</code></td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：引用脚注语法是先输入一个[]，在里面输入一个^号，然后是脚注别名，可以是数字。设置脚注源语法为先输入一个[]，在[]中输入一个^号和脚注别名，然后输入:号，一个空格，后面跟脚注内容。</p>
+<p>语法目的：为文段添加注释或词汇添加注释。</p>
+<p>语法注意事项1：超链接别名不区分大小。</p>
+<h3 id="表情">表情</h3>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>渲染效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>😂</code></td>
+<td>😂</td>
+</tr>
+</tbody>
+</table>
+<p>语法详解：前后用:号包裹，中间输入表情英文简码即可。</p>
+<p>表情简码网址1：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/">https://www.webfx.com/tools/emoji-cheat-sheet/</a></p>
+<p>表情简码网址2：<a href="https://gist.github.com/rxaviers/7360908">https://gist.github.com/rxaviers/7360908</a></p>
+<h2 id="在线信息">在线信息</h2>
+<h3 id="markdown转义字符列表">Markdown转义字符列表</h3>
+<p>Markdown转义字符列表: <a href="https://www.markdownguide.org/basic-syntax/#characters-you-can-escape">https://www.markdownguide.org/basic-syntax/#characters-you-can-escape</a></p>
+<h3 id="英文手册">英文手册</h3>
+<p>基础语法：<a href="https://www.markdownguide.org/basic-syntax/">https://www.markdownguide.org/basic-syntax/</a></p>
+<p>扩展语法：<a href="https://www.markdownguide.org/extended-syntax/">https://www.markdownguide.org/extended-syntax/</a></p>
+<h3 id="中文菜鸟教程手册">中文菜鸟教程手册</h3>
+<p>Markdown教程：<a href="https://www.runoob.com/markdown/md-tutorial.html">https://www.runoob.com/markdown/md-tutorial.html</a></p>
+<h3 id="gfmgfm手册">GFM<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>手册</h3>
+<p>GFM<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>速查手册: <a href="https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown">https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown</a></p>
+<p>GFM<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>细则: <a href="https://github.github.com/gfm/#disallowed-raw-html-extension-">https://github.github.com/gfm/#disallowed-raw-html-extension-</a></p>
+<h3 id="表情简码">表情简码</h3>
+<p>表情简码网址1：<a href="https://www.webfx.com/tools/emoji-cheat-sheet/">https://www.webfx.com/tools/emoji-cheat-sheet/</a></p>
+<p>表情简码网址2：<a href="https://gist.github.com/rxaviers/7360908">https://gist.github.com/rxaviers/7360908</a></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>GitHub Flavored Markdown，GitHub基于Markdown的扩展版本Markdown。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="article-footer">
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="next">
+                <a href="https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/"
+                    title="Git基础命令速查手册"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/EclipsaTool" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;2017  -
+    2020
+    <div class="publishby">
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://eclipsatool.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://eclipsatool.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/eclipsatool.github.io\/',
+            CONTENT_URL: 'https:\/\/eclipsatool.github.io\/\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://eclipsatool.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+  </body>
+</html>

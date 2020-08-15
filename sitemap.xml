@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>https://eclipsatool.github.io/en/sitemap.xml</loc>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>https://eclipsatool.github.io/zh/sitemap.xml</loc>
+		
+	   	<lastmod>2020-08-15T07:31:19+08:00</lastmod>
+		
+	</sitemap>
+	
+</sitemapindex>

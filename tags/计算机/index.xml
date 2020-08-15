@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机 on EclipsaTool</title>
+    <link>https://eclipsatool.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</link>
+    <description>Recent content in 计算机 on EclipsaTool</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 15 Aug 2020 07:31:19 +0800</lastBuildDate>
+    
+        <atom:link href="https://eclipsatool.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://eclipsatool.github.io/about/</link>
+      <pubDate>Sat, 15 Aug 2020 08:59:57 +0800</pubDate>
+      
+      <guid>https://eclipsatool.github.io/about/</guid>
+      <description>作者还在想~~~~</description>
+    </item>
+    
+    <item>
+      <title>Git基础手册</title>
+      <link>https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/</link>
+      <pubDate>Sat, 15 Aug 2020 07:31:19 +0800</pubDate>
+      
+      <guid>https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/</guid>
+      <description>Git基础手册 作者：eclipsa 摘要：较为完整的介绍git的结构和理念。提供基本的指令使用教程。文中使用的系统为ubuntu。 [toc] Git是什</description>
+    </item>
+    
+    <item>
+      <title>Git基础命令速查手册</title>
+      <link>https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</link>
+      <pubDate>Sat, 15 Aug 2020 07:11:53 +0800</pubDate>
+      
+      <guid>https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E6%89%8B%E5%86%8C/</guid>
+      <description>Git基础命令速查手册 作者：eclipsa 摘要：git常用指令分类汇总。文中使用的系统为ubuntu。 [toc] 常用命令与文件位置 安装Git ubun</description>
+    </item>
+    
+    <item>
+      <title>Markdown基本语法</title>
+      <link>https://eclipsatool.github.io/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Sat, 15 Aug 2020 06:13:57 +0800</pubDate>
+      
+      <guid>https://eclipsatool.github.io/2020/08/15/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>Markdown基本语法 作者：eclipsa 摘要：本文旨在提供较为标准部分的Markdown语法指南，并不记录全部Markdown语法。 [toc] 什</description>
+    </item>
+    
+  </channel>
+</rss>
