@@ -11,6 +11,24 @@
     
     
     <item>
+      <title>vim入门教程</title>
+      <link>https://eclipsatool.github.io/2020/08/28/vim%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Fri, 28 Aug 2020 14:06:22 +0800</pubDate>
+      
+      <guid>https://eclipsatool.github.io/2020/08/28/vim%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>vim入门教程 作者：eclipsa 摘要：建立对vim的基本理解。提供一小部分常用指令。 [toc] 什么是vim 简单来说是一个开源的cli文本编辑器。作</description>
+    </item>
+    
+    <item>
+      <title>source insight入门教程</title>
+      <link>https://eclipsatool.github.io/2020/08/23/source-insight%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sun, 23 Aug 2020 15:19:53 +0800</pubDate>
+      
+      <guid>https://eclipsatool.github.io/2020/08/23/source-insight%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</guid>
+      <description>source insight入门教程 作者：eclipsa 摘要：描述source insight的一些基本概念和用法。 [toc] 什么是source insight 简单来说，是一个</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://eclipsatool.github.io/about/</link>
       <pubDate>Sat, 15 Aug 2020 08:59:57 +0800</pubDate>

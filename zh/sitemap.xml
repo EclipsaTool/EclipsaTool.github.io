@@ -3,15 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://eclipsatool.github.io/about/</loc>
-    <lastmod>2020-08-15T08:59:57+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://eclipsatool.github.io/categories/</loc>
-    <lastmod>2020-08-15T07:31:19+08:00</lastmod>
+    <lastmod>2020-08-28T14:06:22+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -28,7 +21,7 @@
   
   <url>
     <loc>https://eclipsatool.github.io/</loc>
-    <lastmod>2020-08-15T07:31:19+08:00</lastmod>
+    <lastmod>2020-08-28T14:06:22+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -44,29 +37,15 @@
   </url>
   
   <url>
-    <loc>https://eclipsatool.github.io/tags/git/</loc>
-    <lastmod>2020-08-15T07:31:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/</loc>
-    <lastmod>2020-08-15T07:31:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://eclipsatool.github.io/posts/</loc>
-    <lastmod>2020-08-15T07:31:19+08:00</lastmod>
+    <lastmod>2020-08-28T14:06:22+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://eclipsatool.github.io/tags/</loc>
-    <lastmod>2020-08-15T07:31:19+08:00</lastmod>
+    <lastmod>2020-08-28T14:06:22+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -82,14 +61,70 @@
   </url>
   
   <url>
+    <loc>https://eclipsatool.github.io/tags/vim/</loc>
+    <lastmod>2020-08-28T14:06:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://eclipsatool.github.io/2020/08/28/vim%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2020-08-28T14:06:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://eclipsatool.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2020-08-15T07:31:19+08:00</lastmod>
+    <lastmod>2020-08-28T14:06:22+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://eclipsatool.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <lastmod>2020-08-28T14:06:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://eclipsatool.github.io/tags/source-insight/</loc>
+    <lastmod>2020-08-23T15:19:53+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://eclipsatool.github.io/2020/08/23/source-insight%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2020-08-23T15:19:53+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://eclipsatool.github.io/tags/%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2020-08-23T15:19:53+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://eclipsatool.github.io/about/</loc>
+    <lastmod>2020-08-15T08:59:57+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://eclipsatool.github.io/tags/git/</loc>
+    <lastmod>2020-08-15T07:31:19+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://eclipsatool.github.io/2020/08/15/git%E5%9F%BA%E7%A1%80%E6%89%8B%E5%86%8C/</loc>
     <lastmod>2020-08-15T07:31:19+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
