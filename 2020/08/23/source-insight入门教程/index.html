@@ -40,7 +40,7 @@
 <meta itemprop="description" content="描述source insight的一些基本概念和用法。">
 <meta itemprop="datePublished" content="2020-08-23T15:19:53+08:00" />
 <meta itemprop="dateModified" content="2020-08-23T15:19:53+08:00" />
-<meta itemprop="wordCount" content="2893">
+<meta itemprop="wordCount" content="3470">
 
 
 
@@ -300,8 +300,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/23/source-insight%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/#comments"
             class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 2893字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 6分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 3470字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 7分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -347,6 +347,9 @@ FM15Output\*.bat
 <p>(移除只是从项目中移除，不是删除。)</p>
 <p><strong>新建文件</strong></p>
 <p><code>ctrl n</code>用于新建文件。</p>
+<p><strong>格式化换行符</strong></p>
+<p><code>Edit &gt; Special Edit &gt; Normalize End Of Line Characters</code>中可以修改当前文件的换行符。</p>
+<p><code>Options &gt; Peference &gt; Files &gt; Default line ending</code>中可以修改默认文件的换行符，用于新建文件。</p>
 <h3 id="扩展操作模块">扩展操作模块</h3>
 <p><strong>关系窗口</strong></p>
 <p><code>View &gt; panel &gt; Relation Window</code>用于显示关系窗口，<code>relation window</code>。可以显示某个语法元素与其相关的所有其他语法元素关系，如函数调用关系，类关系。关系窗口支持多种多种视图模式，可以在上面用右键调整。</p>
@@ -539,6 +542,24 @@ FM15Output\*.bat
 <p><code>Tools &gt; Directory Compare</code>启动文件夹(多文件)对比功能。面板仅列出文件状态。双击进入文件对比。</p>
 <p><strong>代码格式化</strong></p>
 <p><code>Tools &gt; Reformat Source Code with xxx Preset</code>可以格式化代码到某一种风格。风格在<code>Tools &gt; Reformat Source Code Options</code>中调整。</p>
+<h3 id="重置设置">重置设置</h3>
+<p><code>Options &gt; Preferences &gt; General</code>中的<code>Use Defaults</code>可以重置source insight的配置回到默认状态。</p>
+<h2 id="个性化配置">个性化配置</h2>
+<p><code>Options &gt; File Type Options</code>中支持针对某种语言进行的个性化管理配置。</p>
+<p><strong>显示行号</strong></p>
+<p><code>Options &gt; File Type Options</code>中<code>Show line numbers</code>能够配置当前编程语言默认显示行号。</p>
+<p><code>View &gt; Line Numbers</code>可以在当前文件显示行号。</p>
+<p><strong>显示右边界</strong></p>
+<p><code>Options &gt; File Type Options</code>中<code>Show right margin</code>能够配置当前编程语言默认右边界，用于辅助控制单行字符的长度。</p>
+<p><code>Options &gt; File Type Options</code>中<code>Margin width</code>用于控制右边界显示的位置。</p>
+<p><strong>tab自动转spaces</strong></p>
+<p><code>Options &gt; File Type Options</code>中<code>Expand tabs to spaces</code>能够配置当前编程语言默认自动将tab转化为空格。</p>
+<p><code>Options &gt; File Type Options</code>中<code>Tab width</code>用于控制tab转化空格的数量。</p>
+<p><strong>tab和spaces可视化</strong></p>
+<p><code>Options &gt; File Type Options</code>中<code>Visible tabs</code>和<code>Visible spaces</code>能够配置当前编程语言默认自动以•代替显示tab和space。</p>
+<p><code>View &gt; Visible Tabs and Spaces</code>可以在当前文件自动以•代替显示tab和space。</p>
+<p><strong>换行符可视化</strong></p>
+<p><code>View &gt; Visible End Of Line</code>可以在当前文件以ASCII符号简称显示行号符。</p>
 <h2 id="在线信息">在线信息</h2>
 <p>官方教程：<a href="https://www.sourceinsight.com/doc/v4/userguide/index.html#t=Manual%2FFrontMatter%2FFrontMatter.htm">https://www.sourceinsight.com/doc/v4/userguide/index.html#t=Manual%2FFrontMatter%2FFrontMatter.htm</a></p>
 
